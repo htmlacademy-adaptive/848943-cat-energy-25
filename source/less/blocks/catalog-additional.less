@@ -1,3 +1,9 @@
+.catalog-additional__item {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto auto auto;
+}
+
 .catalog-additional__header {
   font-family: 'Oswald Regular', 'Arial', sans-serif;
   font-style: normal;
@@ -8,6 +14,8 @@
 }
 
 .catalog-additional__title {
+  grid-column: 1/-1;
+
   font-family: 'Oswald Regular', 'Arial', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -18,6 +26,8 @@
 }
 
 .catalog-additional__description {
+  grid-column: 1/-1;
+
   font-family: 'Arial', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -27,10 +37,16 @@
 }
 
 .catalog-additional__price {
+  grid-column: 1/-1;
+
   font-family: 'Arial', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   color: @special_dark-grey;
+}
+
+.catalog-additional__button {
+  grid-column: 1/-1;
 }

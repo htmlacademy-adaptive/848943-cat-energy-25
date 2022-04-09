@@ -1,4 +1,13 @@
+.product {
+  display: grid;
+  grid-template-columns: 2fr 1.1fr 0.9fr;
+  grid-template-rows: auto auto auto;
+}
+
 .product__name {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin: 0;
   font-family: 'Oswald Regular', 'Arial', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -8,12 +17,33 @@
   color: @special_dark-grey-2;
 }
 
-
 .product__features {
+  grid-column: 2/-1;
+  grid-row: 2/3;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
   font-family: 'Arial', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   color: @special_dark-grey;
+}
+
+.product__value {
+  margin: 0;
+  margin-left: auto;
+}
+
+.product__image {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  margin: auto;
+}
+
+.product__button {
+  grid-column: 1/-1;
 }
