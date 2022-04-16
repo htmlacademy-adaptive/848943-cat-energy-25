@@ -10,7 +10,7 @@
     <header class="main-header">
       <h1 class="visually-hidden">Интернет-магазин CAT ENERGY</h1>
       <nav class="main-nav">
-        <div class="page-wrapper">
+        <div class="main-nav__inner page-wrapper">
           <ul class="main-nav__logo-list reset-list">
             <li class="main-nav__logo-item">
               <a class="main-nav__logo logo" href="index.html">
@@ -57,7 +57,7 @@
         <div class="banner__inner page-wrapper">
           <h2 class="banner__header header">Функциональное питание для котов</h2>
           <p class="banner__text">Занялся собой? Займись котом!</p>
-          <img src="img/index/index-can-mobile.png" alt="Cat Energy PRO. Вкус курица." class="banner__image" width="280" height="270">
+          <img class="banner__image" src="img/index/index-can-mobile.png" alt="Cat Energy PRO. Вкус курица." width="280" height="270">
           <button class="banner__button button-catalog" type="button">Подобрать программу</button>
         </div>
       </section>
@@ -98,30 +98,32 @@
         </div>
       </section>
       <section class="demo">
-        <div class="page-wrapper">
+        <div class="demo__inner page-wrapper">
           <h2 class="demo__header header">Живой пример</h2>
-          <p class="demo__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <dl class="demo__data-list ">
-            <div class="demo__block">
-              <dt class="demo__block-term">Снижение веса</dt>
-              <dd class="demo__block-description">5 кг</dd>
-            </div>
-            <div class="demo__block">
-              <dt class="demo__block-term">Затрачено времени</dt>
-              <dd class="demo__block-description">60 дней</dd>
-            </div>
-            <div class="demo__expenses">
-              <dt class="demo__expenses-term">Затраты на питание:</dt>
-              <dd class="demo__expenses-description">15000 руб.</dd>
-            </div>
-          </dl>
-          <div class="slider">
+          <div class="demo__text-box">
+            <p class="demo__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <dl class="demo__data-list ">
+              <div class="demo__block">
+                <dt class="demo__block-term">Снижение веса</dt>
+                <dd class="demo__block-description">5 кг</dd>
+              </div>
+              <div class="demo__block">
+                <dt class="demo__block-term">Затрачено времени</dt>
+                <dd class="demo__block-description">60 дней</dd>
+              </div>
+              <div class="demo__expenses">
+                <dt class="demo__expenses-term">Затраты на питание:</dt>
+                <dd class="demo__expenses-description">15000 руб.</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="demo__slider slider">
             <figure class="slider__item">
-              <img src="img/index/before-mobile.jpg" alt="Фото до." width="243" height="232">
+              <img class="slider__image" src="img/index/before-mobile.png" alt="Фото до." width="243" height="232">
               <figcaption class="visually-hidden">Было</figcaption>
             </figure>
             <figure class="slider__item">
-              <img src="img/index/after-mobile.jpg" alt="Фото после." width="243" height="232">
+              <img class="slider__image" src="img/index/after-mobile.png" alt="Фото после." width="243" height="232">
               <figcaption class="visually-hidden">Стало</figcaption>
             </figure>
             <p class="slider__toggles">
@@ -133,17 +135,22 @@
       </section>
     </main>
     <footer class="page-footer">
-      <section class="page-footer__address page-wrapper">
+      <section class="page-footer__address">
         <h2 class="visually-hidden">Наш адрес</h2>
         <address class="address">
-          <div class="address__inner">
-            <p class="address__description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-            <p class="address__legend">Приглашаем к сотрудничеству дилеров!</p>
+          <div class="page-wrapper">
+            <div class="address__inner">
+              <p class="address__description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+              <p class="address__legend">Приглашаем к сотрудничеству дилеров!</p>
+            </div>
           </div>
-          <img class="address__map" src="img/index/location.jpg" alt="Адрес на карте." width="320" height="362">
+          <div class="address__map-wrapper">
+            <img class="address__map" src="img/index/location.jpg" alt="Адрес на карте." width="320" height="362">
+          </div>
         </address>
       </section>
-      <div class="page-footer__links page-wrapper">
+      <div class="page-footer__links">
+        <div class="page-footer__inner page-wrapper">
           <a class="logo" href="index.html">
             <svg class="logo__name" width="101" height="18" viewBox="0 0 101 18" fill="#111" xmlns="http://www.w3.org/2000/svg" role="img"
               aria-label="На главную">
@@ -174,6 +181,7 @@
             <h2 class="visually-hidden">Разработчик сайта</h2>
             <a class="copyright__link" href="https://htmlacademy.ru/">HTML Academy</a>
           </section>
+        </div>
       </div>
     </footer>
   </body>

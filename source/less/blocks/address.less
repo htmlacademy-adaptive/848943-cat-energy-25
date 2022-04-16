@@ -1,4 +1,30 @@
+.address {
+  position: relative;
+}
+
+.address__inner {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 95px;
+    width: 405px;
+    padding: 56px 80px;
+    background-color: #ffffff;
+  }
+}
+
 .address__legend {
+  order: -1;
+  width: 139px;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -6,9 +32,15 @@
   line-height: 20px;
   text-transform: uppercase;
   color: #111111;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .address__description {
+  width: 139px;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -17,7 +49,18 @@
   color: @special_dark-grey;
 }
 
+.address__map-wrapper {
+  width: auto;
+  height: 362px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
+  }
+}
+
 .address__map {
-  position: relative;
-  left: -20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
