@@ -1,7 +1,27 @@
+.main-nav__inner {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .main-nav__logo-list {
   display: flex;
   justify-content: space-between;
   min-height: 66px;
+}
+
+.main-nav__menu-list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 440px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 478px;
+  }
 }
 
 .main-nav__menu-item {
@@ -16,6 +36,20 @@
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
-
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: 30px;
+    color: #ffffff;
+  }
+}
+
+.main-nav__toggle {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

@@ -1,3 +1,30 @@
 .categories {
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 15px;
+  }
+}
+
+.categories__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: @desktop-width) {
+    justify-content: space-between;
+  }
+}
+
+.categories__item {
+  width: 100%;
   background-color: @basic_grey;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 30px;
+    padding: 77px 62px 53px 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 456px;
+  }
 }
