@@ -543,7 +543,7 @@ section {
   background-color: #F2F2F2;
 }
 @media (min-width: 768px) {
-  .page-footer__links {
+  .page-footer__inner {
     display: flex;
     justify-content: space-between;
   }
