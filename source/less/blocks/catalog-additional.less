@@ -1,7 +1,33 @@
+.catalog-additional {
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 86px;
+  }
+}
+
+
 .catalog-additional__item {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto auto auto auto;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 3fr 2fr 1fr;
+    grid-template-rows: auto auto;
+    align-items: baseline;
+    min-height: 139px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 245px 80px 245px 80px 245px;
+    grid-template-rows: auto;
+    min-height: 72px;
+  }
 }
 
 .catalog-additional__header {
@@ -11,11 +37,16 @@
   font-size: 24px;
   line-height: 24px;
   color: #000000;
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/-1;
+  }
 }
 
 .catalog-additional__title {
   grid-column: 1/-1;
 
+  margin: 0;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -23,30 +54,65 @@
   line-height: 16px;
   text-transform: uppercase;
   color: @special_dark-grey-2;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1/2;
+  }
 }
 
 .catalog-additional__description {
   grid-column: 1/-1;
-
+  margin: 0;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   color: @special_dark-grey;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 2/3;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 3/4;
+  }
 }
 
 .catalog-additional__price {
   grid-column: 1/-1;
-
+  margin: 0;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   color: @special_dark-grey;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 3/4;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 4/5;
+  }
 }
 
 .catalog-additional__button {
   grid-column: 1/-1;
+
+  @media (min-width: @desktop-width) {
+    grid-column: 5/6;
+  }
+}
+
+.catalog-additional__inner {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: auto 245px;
+    grid-template-rows: auto auto;
+    column-gap: 80px;
+  }
 }

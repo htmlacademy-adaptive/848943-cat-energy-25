@@ -2,6 +2,17 @@
   display: grid;
   grid-template-columns: 2fr 1.1fr 0.9fr;
   grid-template-rows: auto auto auto;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    width: 324px;
+    min-height: 511px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+  }
 }
 
 .product__name {
@@ -15,6 +26,10 @@
   line-height: 20px;
   text-transform: uppercase;
   color: @special_dark-grey-2;
+
+  @media (min-width: @tablet-width) {
+    align-self: center;
+  }
 }
 
 .product__features {
@@ -42,6 +57,10 @@
   grid-column: 1/2;
   grid-row: 1/3;
   margin: auto;
+
+  @media (min-width: @tablet-width) {
+    order: -1;
+  }
 }
 
 .product__button {

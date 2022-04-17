@@ -1,0 +1,34 @@
+.catalog__list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.catalog__item {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+    margin-right: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 62px;
+    margin-right: 80px;
+  }
+}
+
+.catalog__item:nth-child(2n) {
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 80px;
+  }
+}
+
+.catalog__item:nth-child(4n) {
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+  }
+}
