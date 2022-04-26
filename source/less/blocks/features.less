@@ -1,8 +1,21 @@
 .features {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 43px;
+    margin-bottom: 0;
+  }
+}
+
+.features__header {
+  margin-bottom: 5px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 56px;
+    font-size: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 56px;
   }
 }
 
@@ -10,33 +23,99 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  @media (min-width: @desktop-width) {
     justify-content: space-between;
+    counter-reset: list1;
   }
 }
 
 .features__item {
+  position: relative;
+  padding-left: 82px;
+
   @media (min-width: @tablet-width) {
-    width: 246px;
+    width: 250px;
     min-height: 280px;
-    margin-right: 80px;
     margin-bottom: 37px;
+    margin-right: 74px;
+    padding-left: 0;
   }
 
   @media (min-width: @desktop-width) {
-    width: 230px;
     margin-right: 0;
+    margin-bottom: 15px;
+    padding-left: 0;
+  }
+}
+
+.features__item::before {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-position: -8px -9px;
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    top: 0;
+    background-position: 3px 3px;
+  }
+}
+
+.features__item:nth-child(1)::before {
+  background-image: url("/img/index/features-1.svg");
+}
+
+.features__item:nth-child(2)::before {
+  background-image: url("/img/index/features-2.svg");
+}
+
+.features__item:nth-child(3)::before {
+  background-image: url("/img/index/features-3.svg");
+}
+
+.features__item:nth-child(4)::before {
+  background-image: url("/img/index/features-4.svg");
+}
+
+.features__item::after {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: -36px;
+    right: 40px;
+    z-index: -1;
+    counter-increment: list1;
+    content: counter(list1);
+    width: 90px;
+    height: 280px;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 280px;
+    line-height: 280px;
+    color: @basic_grey;
   }
 }
 
 .features__text {
   margin: 0;
+  padding-top: 12px;
+  padding-bottom: 14px;
+  padding-right: 4px;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+  word-wrap: break-word;
   color: @special_dark-grey;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 112px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

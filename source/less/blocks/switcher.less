@@ -1,0 +1,104 @@
+.switcher__label {
+  position: relative;
+  display: inline-block;
+  max-width: 100px;
+  word-wrap: break-word;
+  cursor: pointer;
+}
+
+.switcher__label::before,
+.switcher__label::after {
+  position: absolute;
+  display: block;
+  content: "";
+  z-index: 10;
+}
+
+.switcher__label::before {
+  top: -11px;
+  left: 97px;
+
+  width: 86px;
+  height: 14px;
+  background: #ffffff;
+  border: 1px solid @special_grey;
+  box-sizing: border-box;
+  border-radius: 6px;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    left: 75px;
+    width: 426px;
+    height: 6px;
+    background-color: @special_grey;
+  }
+}
+
+.switcher__label::after {
+  top: -7px;
+  left: 103px;
+  width: 36px;
+  height: 6px;
+
+  border-radius: 6px;
+  background-color: @basic_green;
+  transition: 200ms ease-in;
+
+  @media (min-width: @tablet-width) {
+    left: 283px;
+    top: -3px;
+    width: 6px;
+    height: 6px;
+    border: 1px solid @special_grey;
+    border-radius: 50%;
+    box-shadow: 0 0 0 11px #ffffff, 0 0 0 12px #00000029;
+  }
+}
+
+.switcher::before,
+.switcher::after {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 80px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.switcher::before {
+  content: "Было";
+  left: 0;
+  text-align: right;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+  }
+}
+
+.switcher::after {
+  content: "Стало";
+  right: 0;
+  text-align: left;
+
+  @media (min-width: @tablet-width) {
+    text-align: right;
+  }
+}
+
+.switcher__input:checked ~ .switcher__label::after {
+  transform: translateX(40px);
+}
+
+.switcher::before:active .switcher__label::after {
+  transform: translateX(46px);
+}
