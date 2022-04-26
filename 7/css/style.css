@@ -517,7 +517,7 @@ a {
   left: 24px;
   width: 50px;
   height: 53px;
-  background: url("/img/index/cat_slim.svg") no-repeat 0 0;
+  background: url("../img/index/cat_slim.svg") no-repeat 0 0;
   background-size: 100%;
 }
 @media (min-width: 768px) {
@@ -541,7 +541,7 @@ a {
   left: 14px;
   width: 69px;
   height: 52px;
-  background: url("/img/index/cat_burly.svg") no-repeat 0 0;
+  background: url("../img/index/cat_burly.svg") no-repeat 0 0;
   background-size: 100%;
 }
 @media (min-width: 768px) {
@@ -622,7 +622,7 @@ a {
   content: "";
   width: 32px;
   height: 10px;
-  background: url("/img/index/arrow.svg") no-repeat;
+  background: url("../img/index/arrow.svg") no-repeat;
   background-size: 100%;
 }
 @media (min-width: 768px) {
@@ -706,16 +706,16 @@ a {
   }
 }
 .features__item:nth-child(1)::before {
-  background-image: url("/img/index/features-1.svg");
+  background-image: url("../img/index/features-1.svg");
 }
 .features__item:nth-child(2)::before {
-  background-image: url("/img/index/features-2.svg");
+  background-image: url("../img/index/features-2.svg");
 }
 .features__item:nth-child(3)::before {
-  background-image: url("/img/index/features-3.svg");
+  background-image: url("../img/index/features-3.svg");
 }
 .features__item:nth-child(4)::before {
-  background-image: url("/img/index/features-4.svg");
+  background-image: url("../img/index/features-4.svg");
 }
 @media (min-width: 768px) {
   .features__item::after {
