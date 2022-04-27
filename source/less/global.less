@@ -10,6 +10,7 @@ body {
 }
 
 .main-container {
+  width: 100%;
   flex-grow: 1;
 }
 
@@ -17,7 +18,14 @@ a {
   text-decoration: none;
 }
 
+.reset-list {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
 .page-wrapper {
+  position: relative;
   width: 280px;
   margin: 0 auto;
 
@@ -41,37 +49,4 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.reset-list {
-  margin: 0;
-  padding-left: 0;
-  list-style-type: none;
-}
-
-//layouts
-
-nav {
-  outline: 1px solid rgba(255, 0, 0, 0.8);
-  outline-offset: -1px;
-}
-
-ul {
-  outline: 2px solid rgba(8, 172, 30, 0.8);
-  outline-offset: -2px;
-}
-
-li {
-  outline: 1px dotted rgba(193, 243, 13, 0.8);
-  outline-offset: -1px;
-}
-
-section {
-  outline: 1px solid rgba(132, 13, 243, 0.8);
-  outline-offset: -1px;
-}
-
-.slider {
-  outline: 5px dotted rgba(13, 178, 243, 0.8);
-  outline-offset: -5px;
 }

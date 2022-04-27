@@ -1,5 +1,14 @@
 .demo {
   position: relative;
+  border-bottom: 1px solid transparent;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 132px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 6px;
+  }
 }
 
 .demo::before {
@@ -8,20 +17,29 @@
   content: "";
   width: 100%;
   height: 100%;
-  bottom: 0;
+  top: 0;
   left: 0;
   background-color: #eaeaea;
 
   @media (min-width: @tablet-width) {
-    height: 462px;
+    height: 460px;
+    top: 587px;
   }
 
   @media (min-width: @desktop-width) {
     background-color: @basic_grey;
+    top: 150px;
+    height: 600px;
   }
 }
 
 .demo__inner {
+  padding-top: 23px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 15px;
+  }
+
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -29,18 +47,33 @@
   }
 }
 
-.demo__text-box {
-  width: 100%;
+.demo__header {
+  margin-bottom: 16px;
 
   @media (min-width: @tablet-width) {
-    background-color: #ffffff;
+    margin-bottom: 59px;
+    font-size: 60px;
+    line-height: 60px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 436px;
+    margin-bottom: 142px;
+  }
+}
+
+.demo__text-box {
+  width: 100%;
+  margin-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 70px;
+    background-color: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 460px;
     grid-column: 1/2;
     grid-row: 2/3;
-    background-color: @basic_grey;
   }
 }
 
@@ -54,12 +87,46 @@
 }
 
 .demo__block {
+  position: relative;
   display: flex;
-  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 102px;
+  min-height: 33px;
+  margin-bottom: 35px;
+  padding: 10px;
+  word-break: break-all;
+  border: 1px solid @special_grey;
+  border-radius: 3px;
+
+  @media (min-width: @tablet-width) {
+    width: 130px;
+    margin-right: 40px;
+    padding: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
 }
 
 .demo__expenses {
   display: flex;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 12px 5px 12px auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
 }
 
 .demo__data-list {
@@ -68,38 +135,82 @@
   justify-content: space-between;
 
   @media (min-width: @desktop-width) {
-    width: 336px;
+    width: 367px;
   }
 }
 
 .demo__text {
+  margin: 0;
+  margin-bottom: 20px;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: @special_dark-grey;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 10px;
+    margin-bottom: 53px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 70px;
+    padding-right: 22px;
+  }
 }
 
 .demo__block-description {
+  margin: auto;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+  text-transform: uppercase;
+  text-align: center;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .demo__block-term {
+  position: absolute;
+  bottom: -72%;
+  transform: translate(0, -50%);
+  width: 58px;
+  padding: 5px 14px;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 100%;
+  text-transform: lowercase;
+  text-align: center;
   color: @special_dark-grey;
+  background-color: #eaeaea;
+  z-index: 10;
+
+  @media (min-width: @tablet-width) {
+    bottom: -41%;
+    width: 130px;
+    padding: 6px;
+    font-size: 14px;
+    background-color: #ffffff;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @basic_grey;
+  }
 }
 
 .demo__expenses-term {
+  margin-right: 5px;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -107,6 +218,18 @@
   line-height: 20px;
   text-transform: uppercase;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    padding-left: 3px;
+  }
 }
 
 .demo__expenses-description {
@@ -118,4 +241,13 @@
   line-height: 20px;
   text-transform: uppercase;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 163px;
+    text-align: center;
+  }
 }
