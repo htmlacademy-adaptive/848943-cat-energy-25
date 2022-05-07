@@ -1,7 +1,7 @@
 .show-more {
   grid-template-columns: 280px;
   grid-template-rows: auto auto auto;
-  padding-top: 58px;
+  padding-top: 55px;
   position: relative;
 
   &::before,
@@ -23,22 +23,25 @@
   @media (min-width: @tablet-width) {
     margin-top: 70px;
     min-height: 195px;
-    padding-top: 160px;
+    padding-top: 175px;
     padding-bottom: 38px;
     outline: 2px solid @basic_grey;
 
     &::before,
     &::after {
       width: 60px;
-      top: 80px;
+      top: 96px;
       right: 132px;
     }
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 190px;
+
     &::before,
     &::after {
       right: 93px;
+      top: 110px;
     }
   }
 }
@@ -58,7 +61,7 @@
 
   @media (min-width: @tablet-width) {
     margin: 0 auto;
-    margin-bottom: 23px;
+    margin-bottom: 25px;
     width: 134px;
     word-wrap: break-word;
     font-size: 20px;
@@ -79,7 +82,7 @@
 
   @media (min-width: @tablet-width) {
     margin: 0 auto;
-    margin-bottom: 87px;
+    margin-bottom: 85px;
     width: 167px;
     word-wrap: break-word;
     font-size: 16px;

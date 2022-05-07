@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Интернет-магазин Cat energy</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon-precomposed.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -49,7 +54,11 @@
         <div class="banner__inner page-wrapper">
           <h2 class="banner__header header">Функциональное питание для котов</h2>
           <p class="banner__text">Занялся собой? Займись котом!</p>
-          <img class="banner__image" src="img/index/index-can-mobile.png" alt="Cat Energy PRO. Вкус курица." width="280" height="270">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/index/index-can-desktop.png 1x">
+            <source media="(min-width: 768px)" srcset="img/index/index-can-tablet.png 1x, img/index/index-can-tablet@2x.png 2x">
+            <img class="banner__image" src="img/index/index-can.png" srcset="img/index/index-can@2x.png 2x" alt="Cat Energy PRO. Вкус курица." width="280" height="270">
+          </picture>
           <button class="banner__button button-catalog" type="button">Подобрать программу</button>
         </div>
       </section>
@@ -105,17 +114,23 @@
               </div>
               <div class="demo__expenses">
                 <dt class="demo__expenses-term">Затраты на питание:</dt>
-                <dd class="demo__expenses-description">15000 руб.</dd>
+                <dd class="demo__expenses-description">15 000 руб.</dd>
               </div>
             </dl>
           </div>
           <div class="demo__slider slider">
-            <figure class="slider__item">
-              <img class="slider__image" src="img/index/before-mobile.png" alt="Фото до." width="243" height="232">
+            <figure class="slider__item slider__item-before">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/index/before-desktop.png 1x, img/index/before-desktop.png 2x">
+                <img class="slider__image slider__image-before" src="img/index/before-mobile.png" srcset="img/index/before-mobile@2x.png 2x" alt="Фото до." width="243" height="232">
+              </picture>
               <figcaption class="visually-hidden">Было</figcaption>
             </figure>
-            <figure class="slider__item">
-              <img class="slider__image" src="img/index/after-mobile.png" alt="Фото после." width="243" height="232">
+            <figure class="slider__item slider__item-after">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/index/after-desktop.png 1x, img/index/after-desktop.png 2x">
+                <img class="slider__image slider__image-after" src="img/index/after-mobile.png" srcset="img/index/after-mobile@2x.png 2x" alt="Фото после." width="243" height="232">
+              </picture>
               <figcaption class="visually-hidden">Стало</figcaption>
             </figure>
             <p class="slider__toggles switcher">
@@ -129,7 +144,7 @@
     <footer class="page-footer">
       <section class="page-footer__address">
         <h2 class="visually-hidden">Наш адрес</h2>
-        <address class="address">
+        <address class="address address-index">
           <div class="page-wrapper">
             <div class="address__inner">
               <p class="address__description">ул. Большая Конюшенная, д. 19/8 <label>Санкт-Петербург</label></p>
@@ -137,7 +152,11 @@
             </div>
           </div>
           <div class="address__map-wrapper">
-            <img class="address__map" src="img/index/location.jpg" alt="Адрес на карте." width="320" height="362">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/index/location-desktop.jpg 1x, img/index/location-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/index/location-tablet.jpg 1x, img/index/location-tablet@2x.jpg 2x">
+              <img class="address__map" src="img/index/location-mobile.jpg" srcset="img/index/location-mobile@2x.jpg 2x" alt="Адрес на карте." width="320" height="362">
+            </picture>
           </div>
         </address>
       </section>
