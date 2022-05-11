@@ -6,16 +6,19 @@
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
   color: #ffffff;
   word-wrap: break-word;
-
   background-color: @basic_green;
   border: none;
+
+  @media (min-width: @desktop-width) {
+    padding: 10px;
+  }
 }
 
 .button-catalog:hover {

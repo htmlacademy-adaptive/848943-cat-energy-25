@@ -1,9 +1,10 @@
 .banner {
   position: relative;
-  padding-top: 27px;
-  margin-bottom: 20px;
+  padding-top: 28px;
+  margin-bottom: 19px;
 
   @media (min-width: @tablet-width) {
+    padding-top: 15px;
     margin-bottom: 524px;
   }
 
@@ -14,8 +15,8 @@
 }
 
 .banner__header {
-  margin-bottom: 25px;
-  padding-left: 18px;
+  margin-bottom: 24px;
+  padding-left: 16px;
   color: #ffffff;
   text-indent: 9px;
 
@@ -23,15 +24,15 @@
     width: 420px;
     margin-top: 31px;
     margin-bottom: 42px;
-    padding-left: 88px;
+    padding-left: 87px;
     text-indent: 0;
     color: #000000;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 70px;
+    margin-top: 67px;
     margin-bottom: 40px;
-    padding-left: 81px;
+    padding-left: 80px;
   }
 }
 
@@ -45,14 +46,14 @@
 
   @media (min-width: @desktop-width) {
     min-height: 560px;
-    margin-bottom: 64px;
+    margin-bottom: 60px;
   }
 }
 
 .banner__inner::after {
   position: absolute;
-  top: -27px;
-  left: -18px;
+  top: -30px;
+  left: -20px;
   z-index: -1;
   display: block;
   content: "";
@@ -61,24 +62,32 @@
   background-image: linear-gradient(@basic_green--085, @basic_green--085), url("../img/index/index-background-mobile.jpg");
   background-repeat: no-repeat;
 
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(@basic_green--085, @basic_green--085), url("../img/index/index-background-mobile@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     display: none;
   }
 
   @media (min-width: @desktop-width) {
-    top: -152px;
-    left: 610px;
-    width: 709px;
+    top: -155px;
+    left: 612px;
+    width: 718px;
     display: block;
     min-height: 693px;
     background-image: linear-gradient(@basic_green--085, @basic_green--085), url("../img/index/index-background-desktop.jpg");
     background-position: 0 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(@basic_green--085, @basic_green--085), url("../img/index/index-background-desktop@2x.jpg");
+    }
   }
 }
 
 .banner__text {
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 23px;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -99,24 +108,30 @@
 
   @media (min-width: @desktop-width) {
     padding-left: 82px;
-    margin-bottom: 48px;
+    margin-bottom: 50px;
   }
 }
 
 .banner__image {
+  max-width: 100%;
+  min-width: 300px;
+  height: auto;
+  margin-left: -20px;
+
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 230px;
-    left: 85px;
-    width: 622px;
+    top: 232px;
+    left: 0;
+    width: 710px;
     height: auto;
+    margin-left: 0;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    width: 518px;
-    top: 0;
-    left: 480px;
+    width: 547px;
+    top: -13px;
+    left: 450px;
   }
 }
 

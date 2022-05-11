@@ -15,7 +15,7 @@
 }
 
 .switcher__label::before {
-  top: -11px;
+  top: -13px;
   left: 97px;
 
   width: 86px;
@@ -26,8 +26,8 @@
   border-radius: 6px;
 
   @media (min-width: @tablet-width) {
-    top: 0;
-    left: 75px;
+    top: -2px;
+    left: 110px;
     width: 426px;
     height: 6px;
     background-color: @special_grey;
@@ -35,7 +35,7 @@
 }
 
 .switcher__label::after {
-  top: -7px;
+  top: -9px;
   left: 103px;
   width: 36px;
   height: 6px;
@@ -45,8 +45,8 @@
   transition: 200ms ease-in;
 
   @media (min-width: @tablet-width) {
-    left: 283px;
-    top: -3px;
+    left: 320px;
+    top: -5px;
     width: 6px;
     height: 6px;
     border: 1px solid @special_grey;
@@ -55,10 +55,18 @@
   }
 }
 
+.switcher__label:hover::after {
+  box-shadow: 0 0 0 11px #ffffff, 0 0 0 12px @special_grey, 0 2px 4px 12px #00000030;
+}
+
+.switcher__label:active::after {
+  box-shadow: 0 0 0 11px #ffffff, 0 0 0 12px @basic_green, 0 3px 5px 12px #00000033;
+}
+
 .switcher::before,
 .switcher::after {
   position: absolute;
-  top: 0;
+  top: -1px;
   display: block;
   width: 80px;
   font-family: "Oswald", "Arial", sans-serif;
@@ -72,33 +80,42 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: #0000003d;
+    text-underline-offset: 5px;
   }
 }
 
 .switcher::before {
   content: "Было";
-  left: 0;
+  left: -1px;
   text-align: right;
 
   @media (min-width: @tablet-width) {
+    left: 40px;
     text-align: left;
   }
 }
 
 .switcher::after {
   content: "Стало";
-  right: 0;
+  right: -1px;
   text-align: left;
 
   @media (min-width: @tablet-width) {
     text-align: right;
+    right: 34px;
   }
 }
 
-.switcher__input:checked ~ .switcher__label::after {
-  transform: translateX(40px);
+.switcher:hover::before,
+.switcher:hover::after {
+  text-decoration-style: solid;
+  text-decoration-color: #00000066;
 }
 
-.switcher::before:active .switcher__label::after {
-  transform: translateX(46px);
+.switcher:active::before,
+.switcher:active::after {
+  text-decoration: none;
 }
