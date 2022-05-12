@@ -56,11 +56,15 @@
 }
 
 .switcher__label:hover::after {
-  box-shadow: 0 0 0 11px #ffffff, 0 0 0 12px @special_grey, 0 2px 4px 12px #00000030;
+  @media (min-width: @tablet-width) {
+    box-shadow: 0 0 0 11px #ffffff, 0 0 0 12px @special_grey, 0 2px 4px 12px #00000030;
+  }
 }
 
 .switcher__label:active::after {
-  box-shadow: 0 0 0 11px #ffffff, 0 0 0 12px @basic_green, 0 3px 5px 12px #00000033;
+  @media (min-width: @tablet-width) {
+    box-shadow: 0 0 0 11px #ffffff, 0 0 0 12px @basic_green, 0 3px 5px 12px #00000033;
+  }
 }
 
 .switcher::before,
