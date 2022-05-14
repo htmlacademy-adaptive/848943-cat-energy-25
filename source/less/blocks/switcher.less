@@ -1,7 +1,7 @@
 .switcher__label {
   position: relative;
-  display: inline-block;
-  max-width: 100px;
+  display: block;
+  width: 100px;
   word-wrap: break-word;
   cursor: pointer;
 }
@@ -15,7 +15,7 @@
 }
 
 .switcher__label::before {
-  top: -13px;
+  top: 2px;
   left: 97px;
 
   width: 86px;
@@ -26,8 +26,8 @@
   border-radius: 6px;
 
   @media (min-width: @tablet-width) {
-    top: -2px;
-    left: 110px;
+    top: 13px;
+    left: 111px;
     width: 426px;
     height: 6px;
     background-color: @special_grey;
@@ -35,7 +35,7 @@
 }
 
 .switcher__label::after {
-  top: -9px;
+  top: 6px;
   left: 103px;
   width: 36px;
   height: 6px;
@@ -46,7 +46,7 @@
 
   @media (min-width: @tablet-width) {
     left: 320px;
-    top: -5px;
+    top: 10px;
     width: 6px;
     height: 6px;
     border: 1px solid @special_grey;
@@ -56,66 +56,13 @@
 }
 
 .switcher__label:hover::after {
-  box-shadow: 0 0 0 11px #ffffff, 0 0 0 12px @special_grey, 0 2px 4px 12px #00000030;
+  @media (min-width: @tablet-width) {
+    box-shadow: 0 0 0 11px #ffffff, 0 0 0 12px @special_grey, 0 2px 4px 12px #00000030;
+  }
 }
 
 .switcher__label:active::after {
-  box-shadow: 0 0 0 11px #ffffff, 0 0 0 12px @basic_green, 0 3px 5px 12px #00000033;
-}
-
-.switcher::before,
-.switcher::after {
-  position: absolute;
-  top: -1px;
-  display: block;
-  width: 80px;
-  font-family: "Oswald", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: #000000;
-
   @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 30px;
-    text-decoration: underline;
-    text-decoration-style: dotted;
-    text-decoration-color: #0000003d;
-    text-underline-offset: 5px;
+    box-shadow: 0 0 0 11px #ffffff, 0 0 0 12px @basic_green, 0 3px 5px 12px #00000033;
   }
-}
-
-.switcher::before {
-  content: "Было";
-  left: -1px;
-  text-align: right;
-
-  @media (min-width: @tablet-width) {
-    left: 40px;
-    text-align: left;
-  }
-}
-
-.switcher::after {
-  content: "Стало";
-  right: -1px;
-  text-align: left;
-
-  @media (min-width: @tablet-width) {
-    text-align: right;
-    right: 34px;
-  }
-}
-
-.switcher:hover::before,
-.switcher:hover::after {
-  text-decoration-style: solid;
-  text-decoration-color: #00000066;
-}
-
-.switcher:active::before,
-.switcher:active::after {
-  text-decoration: none;
 }
