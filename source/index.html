@@ -56,14 +56,16 @@
         <div class="banner__inner page-wrapper">
           <h2 class="banner__header header">Функциональное питание для котов</h2>
           <p class="banner__text">Занялся собой? Займись котом!</p>
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/index/index-can-desktop.webp 1x">
-            <source media="(min-width: 768px)" srcset="img/index/index-can-tablet.webp 1x, img/index/index-can-tablet@2x.webp 2x">
-            <source srcset="img/index/index-can.webp 1x, img/index/index-can@2x.webp 2x">
-            <source media="(min-width: 1440px)" srcset="img/index/index-can-desktop.png 1x">
-            <source media="(min-width: 768px)" srcset="img/index/index-can-tablet.png 1x, img/index/index-can-tablet@2x.png 2x">
-            <img class="banner__image" src="img/index/index-can.png" srcset="img/index/index-can@2x.png 2x" alt="Cat Energy PRO. Вкус курица." width="280" height="270">
-          </picture>
+          <div class="banner__image-wrap">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/index/index-can-desktop.webp 1x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/index/index-can-tablet.webp 1x, img/index/index-can-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/index/index-can.webp 1x, img/index/index-can@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/index/index-can-desktop.png 1x">
+              <source media="(min-width: 768px)" srcset="img/index/index-can-tablet.png 1x, img/index/index-can-tablet@2x.png 2x">
+              <img class="banner__image" src="img/index/index-can.png" srcset="img/index/index-can@2x.png 2x" alt="Cat Energy PRO. Вкус курица." width="280" height="270">
+            </picture>
+          </div>
           <button class="banner__button button-catalog" type="button">Подобрать программу</button>
         </div>
       </section>
@@ -74,12 +76,12 @@
             <li class="categories__item product-line product-line--slim">
               <h3 class="product-line__header">Похудение</h3>
               <p class="product-line__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-              <a class="product-line__link" href="#" >Каталог SLIM</a>
+              <a class="product-line__link" href="catalog.html#catalog-slim" >Каталог SLIM</a>
             </li>
             <li class="categories__item product-line product-line--burly">
               <h3 class="product-line__header">Набор массы</h3>
               <p class="product-line__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-              <a class="product-line__link" href="#" >Каталог PRO</a>
+              <a class="product-line__link" href="catalog.html#catalog-pro" >Каталог PRO</a>
             </li>
           </ul>
         </div>
@@ -126,9 +128,9 @@
           <div class="demo__slider slider">
             <figure class="slider__item slider__item-before">
               <picture>
-                <source media="(min-width: 1440px)" srcset="img/index/before-desktop.webp">
-                <source media="(min-width: 768px)" srcset="img/index/before-desktop.webp 1x, img/index/before-desktop.webp 2x">
-                <source srcset="img/index/before-mobile.webp 1x, img/index/before-mobile@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/index/before-desktop.webp">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/index/before-desktop.webp 1x, img/index/before-desktop.webp 2x">
+                <source type="image/webp" srcset="img/index/before-mobile.webp 1x, img/index/before-mobile@2x.webp 2x">
                 <source media="(min-width: 1440px)" srcset="img/index/before-desktop.png">
                 <source media="(min-width: 768px)" srcset="img/index/before-desktop.png 1x, img/index/before-desktop.png 2x">
                 <img class="slider__image slider__image-before" src="img/index/before-mobile.png" srcset="img/index/before-mobile@2x.png 2x" alt="Фото до." width="243" height="232">
@@ -138,7 +140,7 @@
             <figure class="slider__item slider__item-after">
               <picture>
                 <source media="(min-width: 768px)" srcset="img/index/after-desktop.webp 1x, img/index/after-desktop.webp 2x">
-                <source srcset="img/index/after-mobile.webp 1x, img/index/after-mobile@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="img/index/after-mobile.webp 1x, img/index/after-mobile@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/index/after-desktop.png 1x, img/index/after-desktop.png 2x">
                 <img class="slider__image slider__image-after" src="img/index/after-mobile.png" srcset="img/index/after-mobile@2x.png 2x" alt="Фото после." width="243" height="232">
               </picture>
@@ -160,14 +162,7 @@
             </div>
           </div>
           <div class="address__map-wrapper">
-            <picture>
-              <source type="image/webp" media="(min-width: 1440px)" srcset="img/index/location-desktop.webp 1x, img/index/location-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/index/location-tablet.webp 1x, img/index/location-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/index/location-mobile.webp 1x, img/index/location-mobile@2x.webp 2x">
-              <source media="(min-width: 1440px)" srcset="img/index/location-desktop.jpg 1x, img/index/location-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/index/location-tablet.jpg 1x, img/index/location-tablet@2x.jpg 2x">
-              <img class="address__map" src="img/index/location-mobile.jpg" srcset="img/index/location-mobile@2x.jpg 2x" alt="Адрес на карте." width="320" height="362">
-            </picture>
+            <iframe class="address__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5978146115312!2d30.320899915944537!3d59.938815581876256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1da634405a68b50c!2zNTnCsDU2JzE5LjciTiAzMMKwMTknMjMuMSJF!5e0!3m2!1sru!2sru!4v1653110097688!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </address>
       </section>
@@ -200,7 +195,7 @@
           </section>
           <section class="page-footer__copyright copyright">
             <h2 class="visually-hidden">Разработчик сайта</h2>
-            <a class="copyright__link" href="https://htmlacademy.ru/">HTML Academy</a>
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </section>
         </div>
       </div>
