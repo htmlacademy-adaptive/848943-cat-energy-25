@@ -1,7 +1,7 @@
 .product {
   position: relative;
   display: grid;
-  grid-template-columns: 141px 78px 61px;
+  grid-template-columns: 136px 83px 61px;
   grid-template-rows: auto auto auto;
   width: 280px;
   margin: 0 auto;
@@ -25,21 +25,24 @@
   grid-column: 2/3;
   grid-row: 1/2;
   margin: 0;
+  padding: 5px;
+  margin-bottom: 8px;
+  word-wrap: break-word;
 
   @media (min-width: @tablet-width) {
     align-self: center;
-    padding: 0 56px 0 59px;
-    margin-bottom: 15px;
+    padding: 5px 56px 5px 59px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 50px 0 59px;
-    margin-top: 6px;
+    padding: 5px 30px 5px 37px;
+    margin-bottom: 11px;
   }
 }
 
 .product__name {
   margin: 0;
+  width: 100%;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -51,6 +54,7 @@
   color: @special_dark-grey-2;
 
   @media (min-width: @tablet-width) {
+    width: 150px;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
@@ -67,8 +71,8 @@
   display: grid;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin: auto;
+  align-items: end;
+  margin: 0 auto;
   width: 140px;
   height: 112px;
 
@@ -81,7 +85,6 @@
 
   @media (min-width: @desktop-width) {
     height: 196px;
-    padding-left: 6px;
     margin-bottom: 42px;
   }
 }
@@ -96,7 +99,9 @@
   display: grid;
   grid-template-columns: 70px 70px;
   grid-template-rows: auto auto auto;
-  margin-top: 13px;
+  padding-left: 5px;
+  margin-top: 0;
+  margin-bottom: 22px;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -106,12 +111,13 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 123px 127px;
-    margin: 0 0 33px;
+    margin: 0 0 32px;
+    padding-left: 0;
     align-items: end;
 
     &::after {
       position: absolute;
-      bottom: -3px;
+      bottom: 8px;
       left: 0;
       z-index: -1;
       display: block;
@@ -121,14 +127,14 @@
       background-color: @basic_grey;
 
       @media (min-width: @desktop-width) {
-        bottom: -20px;
+        bottom: 0;
       }
     }
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr;
-    margin: 3px 36px 0 42px;
+    margin: 0 36px 33px 42px;
   }
 }
 
@@ -139,7 +145,7 @@
 
   @media (min-width: @tablet-width) {
     width: 100%;
-    line-height: 30px;
+    line-height: 31px;
     font-size: 16px;
     text-align: right;
     border-bottom: 1px solid @special_grey;
@@ -159,7 +165,6 @@
 
 .product__button {
   grid-column: 1/-1;
-  margin-top: 10px;
   padding: 10px;
   font-size: 16px;
   line-height: 20px;
@@ -167,10 +172,11 @@
   @media (min-width: @tablet-width) {
     margin-top: 0;
     margin-bottom: 36px;
+    margin-left: 2px;
   }
 
   @media (min-width: @desktop-width) {
     width: 148px;
-    margin: 33px auto 18px;
+    margin: 0 auto 18px;
   }
 }

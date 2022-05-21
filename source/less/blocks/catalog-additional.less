@@ -16,7 +16,7 @@
     margin-bottom: 77px;
 
     &::before {
-      top: 29px;
+      top: 21px;
     }
   }
 
@@ -39,18 +39,23 @@
 
 .catalog-additional__item {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 185px 95px;
   grid-template-rows: auto auto auto auto;
-  padding-bottom: 16px;
+  padding-bottom: 17px;
+  width: 280px;
+  overflow-wrap: break-word;
   border-top: 1px solid @special_grey;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 316px 222px 93px;
     grid-template-rows: auto auto;
+    row-gap: 10px;
     align-items: baseline;
     padding-left: 38px;
-    padding-bottom: 18px;
+    padding-bottom: 27px;
     min-height: 120px;
+    width: 708px;
+    box-sizing: border-box;
     border: 1px solid @special_grey;
     border-bottom: none;
   }
@@ -59,7 +64,8 @@
     grid-template-columns: 245px 80px 245px 80px 245px;
     grid-template-rows: auto;
     align-items: center;
-    min-height: 71px;
+    min-height: 72px;
+    width: 894px;
     padding-left: 0;
     padding-bottom: 0;
     border: none;
@@ -71,6 +77,10 @@
   padding-bottom: 17px;
   border-bottom: 1px solid @special_grey;
 
+  @media (min-width: @tablet-width) {
+    padding-bottom: 25px;
+  }
+
   @media (min-width: @desktop-width) {
     padding-bottom: 0;
   }
@@ -80,11 +90,12 @@
   display: inline-block;
   position: relative;
   margin-top: 25px;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
   margin-left: -20px;
   padding-right: 20px;
   padding-left: 20px;
-
+  max-width: @mobile-width;
+  word-wrap: break-word;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -94,18 +105,19 @@
   background-color: #ffffff;
 
   @media (min-width: @tablet-width) {
-    font-size: 36px;
-    line-height: 36px;
+    max-width: @tablet-width;
     padding-left: 37px;
     padding-right: 36px;
-    margin-top: 9px;
+    margin-top: 0;
     margin-bottom: 80px;
     margin-left: 0;
+    font-size: 36px;
+    line-height: 36px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 39px;
-    margin-bottom: 78px;
+    margin-top: 35px;
+    margin-bottom: 81px;
     margin-left: -40px;
     padding-left: 40px;
   }
@@ -140,9 +152,10 @@
 }
 
 .catalog-additional__description {
-  grid-column: 1/-1;
+  grid-column: 1/2;
   grid-row: 2/3;
   margin: 0;
+  overflow-wrap: break-word;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -195,6 +208,7 @@
 .catalog-additional__button {
   grid-column: 1/-1;
   margin-top: 13px;
+  padding-bottom: 10px;
   font-size: 16px;
   line-height: 20px;
 
@@ -209,10 +223,10 @@
 }
 
 .catalog-additional__list {
-  margin-bottom: 34px;
+  margin-bottom: 35px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 68px;
+    margin-bottom: 69px;
   }
 
   @media (min-width: @desktop-width) {

@@ -9,9 +9,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    position: static;
+    position: relative;
     margin-bottom: 117px;
-    padding-top: 37px;
+    padding-top: 24px;
   }
 }
 
@@ -55,6 +55,29 @@
   }
 }
 
+.banner::before,
+.banner::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    left: 50%;
+    top: -132px;
+    width: 50%;
+    height: 696px;
+  }
+}
+
 .banner::after {
   position: absolute;
   top: 0;
@@ -63,14 +86,15 @@
   display: block;
   content: "";
   width: 100%;
-  height: 62.7%;
-  background-image: linear-gradient(@basic_green--085, @basic_green--085), url("../img/index/index-background-mobile.jpg"), linear-gradient(#505156, #424146);
+  height: 302px;
+  background-image: linear-gradient(@basic_green--085, @basic_green--085), url("../img/index/index-background-mobile.jpg"), linear-gradient(to right, #525358, #434247);
   background-repeat: no-repeat;
   background-position: 50% 0;
+  background-size: auto 100%;
   object-fit: contain;
 
   @media (min-resolution: 2dppx) {
-    background-image: linear-gradient(@basic_green--085, @basic_green--085), url("../img/index/index-background-mobile@2x.jpg"), linear-gradient(#505156, #4d4c52);
+    background-image: linear-gradient(@basic_green--085, @basic_green--085), url("../img/index/index-background-mobile@2x.jpg"), linear-gradient(to right, #525358, #434247);
   }
 
   @media (min-width: @tablet-width) {
@@ -78,15 +102,16 @@
   }
 
   @media (min-width: @desktop-width) {
+    top: -133px;
     left: 50%;
     width: 50%;
     display: block;
-    height: 696px;
-    background-image: linear-gradient(@basic_green--085, @basic_green--085), url("../img/index/index-background-desktop.jpg"), linear-gradient(#4d4c52, #4d4c52);
+    height: 694px;
+    background-image: linear-gradient(@basic_green--085, @basic_green--085), url("../img/index/index-background-desktop.jpg"), linear-gradient(to right, #525358, #434247);
     background-position: 100% 100%;
 
     @media (min-resolution: 2dppx) {
-      background-image: linear-gradient(@basic_green--085, @basic_green--085), url("../img/index/index-background-desktop@2x.jpg"), linear-gradient(#4d4c52, #4d4c52);
+      background-image: linear-gradient(@basic_green--085, @basic_green--085), url("../img/index/index-background-desktop@2x.jpg"), linear-gradient(to right, #525358, #434247);
     }
   }
 }
@@ -153,6 +178,8 @@
 }
 
 .banner__button {
+  width: 100%;
+
   @media (min-width: @tablet-width) {
     grid-row: 3/4;
     grid-column: 1/2;
