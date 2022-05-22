@@ -7,7 +7,6 @@
     min-height: 195px;
     padding-top: 155px;
     padding-bottom: 37px;
-    outline: 2px solid @basic_grey;
   }
 
   @media (min-width: @desktop-width) {
@@ -17,7 +16,8 @@
 }
 
 .show-more::after {
-  display: none;
+  background-color: transparent;
+  border: 2px solid @basic_grey;
 }
 
 .show-more__title-link {
@@ -60,7 +60,7 @@
     &::after {
       top: -77px;
     }
-}
+  }
 }
 
 .show-more__title {
