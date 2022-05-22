@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Подбор программы</title>
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
@@ -55,19 +57,19 @@
         <form class="program-selection__form form" action="https://echo.htmlacademy.ru/" method="get">
           <p class="form__text page-wrapper">Заполните анкету, и мы подберем программу питания для вашего кота</p>
           <fieldset class="form__fieldset form__fieldset-name">
+            <legend class="visually-hidden">Ваш кот:</legend>
             <ul class="form__list form__list-name reset-list page-wrapper">
-              <legend class="visually-hidden">Ваш кот:</legend>
               <li class="form__item-name">
                 <label class="form__label" for="form-name">ИМЯ:*</label>
-                <input class="form__input" type="text" name="name" id="form-name" value="Барсик">
+                <input class="form__input" type="text" name="name" id="form-name" placeholder="Барсик">
               </li>
               <li class="form__item-name">
                 <label class="form__label" for="form-weight">Вес (кг):*</label>
-                <input class="form__input" type="number" name="weight" id="form-weight" value="7">
+                <input class="form__input" type="number" name="weight" id="form-weight" placeholder="7">
               </li>
               <li class="form__item-name">
                 <label class="form__label" for="form-age">Возраст (лет):</label>
-                <input class="form__input" type="number" name="age" id="form-age" value="7">
+                <input class="form__input" type="number" name="age" id="form-age" placeholder="7">
               </li>
             </ul>
           </fieldset>
@@ -94,11 +96,11 @@
               </legend>
             <ul class="form__contacts-list page-wrapper reset-list">
               <li class="form__item-contacts form__contacts-email">
-                <input class="form__input form__email-input" type="email" name="e-mail" id="form__email-input" value="kuklachev@gmail.com">
+                <input class="form__input form__email-input" type="email" name="e-mail" id="form__email-input" placeholder="kuklachev@gmail.com">
                 <label class="form__label form__label-email" for="form__email-input">E-mail:*</label>
               </li>
               <li class="form__item-contacts form__contacts-tel">
-                <input class="form__input form__tel-input" type="tel"  pattern="\8\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" name="tel" id="form__tel-input" placeholder="8 (___)___-__-__" value="8 (960) 900-60-90">
+                <input class="form__input form__tel-input" type="tel"  pattern="\8\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" name="tel" id="form__tel-input" placeholder="8 (960) 900-60-90">
                 <label class="form__label form__label-tel" for="form__tel-input">Телефон:*</label>
               </li>
             </ul>
@@ -148,14 +150,7 @@
             </div>
           </div>
           <div class="address__map-wrapper">
-            <picture>
-              <source type="image/webp" media="(min-width: 1440px)" srcset="img/index/location-desktop.webp 1x, img/index/location-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/index/location-tablet.webp 1x, img/index/location-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/index/location-mobile.webp 1x, img/index/location-mobile@2x.webp 2x">
-              <source media="(min-width: 1440px)" srcset="img/index/location-desktop.jpg 1x, img/index/location-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/index/location-tablet.jpg 1x, img/index/location-tablet@2x.jpg 2x">
-              <img class="address__map" src="img/index/location-mobile.jpg" srcset="img/index/location-mobile@2x.jpg 2x" alt="Адрес на карте." width="320" height="362">
-            </picture>
+            <iframe class="address__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5978146115312!2d30.320899915944537!3d59.938815581876256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1da634405a68b50c!2zNTnCsDU2JzE5LjciTiAzMMKwMTknMjMuMSJF!5e0!3m2!1sru!2sru!4v1653110097688!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </address>
       </section>
@@ -188,7 +183,7 @@
           </section>
           <section class="page-footer__copyright copyright">
             <h2 class="visually-hidden">Разработчик сайта</h2>
-            <a class="copyright__link" href="https://htmlacademy.ru/">HTML Academy</a>
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </section>
         </div>
       </div>

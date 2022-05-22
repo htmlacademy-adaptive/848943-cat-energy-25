@@ -1,4 +1,3 @@
-manifest.webmanifest
 {
   "icons": [
     { "src": "img/favicons/favicon-16x16.png", "type": "image/png", "sizes": "16x16" },

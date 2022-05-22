@@ -1,13 +1,35 @@
 .show-more {
   grid-template-columns: 280px;
   grid-template-rows: auto auto auto;
-  padding-top: 55px;
+  padding-top: 58px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 195px;
+    padding-top: 155px;
+    padding-bottom: 37px;
+    outline: 2px solid @basic_grey;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 40px;
+    margin-top: 80px;
+  }
+}
+
+.show-more::after {
+  display: none;
+}
+
+.show-more__title-link {
+  margin: 0;
+  padding: 5px;
+  text-indent: 2px;
   position: relative;
 
   &::before,
   &::after {
     position: absolute;
-    top: 18px;
+    top: -37px;
     right: 125px;
     display: block;
     content: "";
@@ -21,35 +43,28 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-top: 70px;
-    min-height: 195px;
-    padding-top: 175px;
-    padding-bottom: 38px;
-    outline: 2px solid @basic_grey;
+    margin: 0 auto;
+    margin-bottom: 18px;
+    width: 134px;
 
     &::before,
     &::after {
       width: 60px;
-      top: 96px;
-      right: 132px;
+      top: -72px;
+      right: 41px;
     }
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 190px;
-
     &::before,
     &::after {
-      right: 93px;
-      top: 110px;
+      top: -77px;
     }
-  }
+}
 }
 
 .show-more__title {
   margin: 0;
-  margin-left: 2px;
-  margin-bottom: 7px;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -60,9 +75,6 @@
   color: #111111;
 
   @media (min-width: @tablet-width) {
-    margin: 0 auto;
-    margin-bottom: 25px;
-    width: 134px;
     word-wrap: break-word;
     font-size: 20px;
     line-height: 22px;
@@ -71,18 +83,18 @@
 
 .show-more__text {
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 20px;
   text-align: center;
   color: @special_dark-grey;
 
   @media (min-width: @tablet-width) {
     margin: 0 auto;
-    margin-bottom: 85px;
+    margin-bottom: 86px;
     width: 167px;
     word-wrap: break-word;
     font-size: 16px;

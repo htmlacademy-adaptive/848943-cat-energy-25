@@ -29,7 +29,7 @@ export const styles = () => {
 
 //html
 
-export const html = () => {
+const html = () => {
   return gulp.src('source/*.html')
   .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest('build'));
@@ -37,7 +37,7 @@ export const html = () => {
 
 //scripts
 
-export const scripts = () => {
+const scripts = () => {
   return gulp.src('source/js/*.js')
   .pipe(gulp.dest('build/js'));
   }
@@ -57,7 +57,7 @@ const copyImages = () => {
 
   //WebP
 
-export const createWebp = () => {
+const createWebp = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
   .pipe(squoosh({
     webp: {}
@@ -67,7 +67,7 @@ export const createWebp = () => {
 
 //svg
 
-export const svg = () => {
+const svg = () => {
   return gulp.src(['source/img/**/*.svg', '!source/img/logo/*.svg'])//выбрать все svg, кроме папки logo
   .pipe(svgo())
   .pipe(gulp.dest('build/img'));
@@ -75,7 +75,7 @@ export const svg = () => {
 
 //svg sprite
 
-export const sprite = () => {
+const sprite = () => {
   return gulp.src('source/img/logo/*.svg')
   .pipe(svgo())
   .pipe(svgstore({
@@ -87,7 +87,7 @@ export const sprite = () => {
 
 //copy
 
-export const copy = () => {
+const copy = () => {
   return gulp.src([
     'source/fonts/*.{woff2,woff}',
     'source/*.ico',
@@ -100,7 +100,7 @@ export const copy = () => {
 
  //clean
 
-export const clean = () => {
+const clean = () => {
   return del('build');
 };
 
@@ -130,7 +130,7 @@ const watcher = () => {
 export const build = gulp.series(
   clean,
   copy,
-  copyImages,
+  optimizeImages,
   gulp.parallel(
   styles,
   html,
@@ -158,4 +158,5 @@ export default gulp.series(
   gulp.series(
   server,
   watcher
-  ));
+  )
+  );

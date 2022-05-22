@@ -26,7 +26,6 @@
 }
 
 .main-nav__logo {
-  display: flex;
   padding-top: 10px;
   padding-bottom: 16px;
 
@@ -43,18 +42,18 @@
 }
 
 .main-nav__logo-link {
-  width: 68%;
+  width: 191px;
   display: flex;
   justify-content: space-between;
 
   @media (min-width: @tablet-width) {
     width: 178px;
-    height: 40px;
+    height: 55px;
   }
 
   @media (min-width: @desktop-width) {
     width: 220px;
-    height: 50px;
+    height: 63px;
   }
 }
 
@@ -109,6 +108,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    z-index: 10;
     width: 610px;
     margin-left: auto;
     margin-right: 0;
@@ -209,11 +209,11 @@
 
 .main-nav--closed .main-nav__inner::before {
   position: absolute;
-  top: -33px;
+  top: -34px;
   right: 0;
   display: block;
   content: "";
-  width: 25px;
+  width: 24px;
   height: 2px;
   background-color: #000000;
   box-shadow: 0 -8px 0 0 #000000, 0 8px 0 0 #000000;
@@ -246,18 +246,26 @@
 
 /*свертывание меню в мобильной версии*/
 
+.main-nav--nojs .main-nav__inner {
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
 @media (max-width: @mobile-width-only) {
   .main-nav--closed .main-nav__menu-list {
     display: none;
+  }
+
+  .main-nav--nojs .main-nav__menu-list {
+    position: static;
+    display: block;
   }
 }
 
 .main-nav--nojs .main-nav__button {
   display: none;
-}
-
-.main-nav--nojs .main-nav__menu-list {
-  position: static;
 }
 
 .main-nav__logo-link:hover {
@@ -271,5 +279,3 @@
 .main-nav__link:hover {
   opacity: 0.6;
 }
-
-/*main menu down?????*/
